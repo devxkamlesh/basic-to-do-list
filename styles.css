@@ -1,0 +1,121 @@
+:root {
+  /* 🌈 Color Palette (Dark Mode Default) */
+  --primary-color: #165594;
+  --secondary-color: #adb5bd;
+  --accent-color: #ff9800;
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --border-color: #333;
+  --shadow-color: rgba(255, 255, 255, 0.4);
+
+  /* 🖋 Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary:'segoe UI';
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-sm: 14px;
+  --line-height: 1.6;
+}
+
+body{
+  margin: 0px;
+  padding:0px;
+  box-sizing: border-box;
+  color:var(--text-color);
+  font-family: var(--font-primary);
+  background: var(--background-color); 
+}
+
+
+.header{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+.heading{
+  display: inline;
+  padding:50px 20px;
+}
+
+.main{
+  /* background-color: var(--background-color);  */
+  width: 100%;
+  border-top: var(--border-color) 1px solid;
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-section{
+  width: 600px;
+  height: 100px;
+  /* background-color: var(--border-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-input{
+  width: 400px;
+  height: 30px;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-secondary);
+  font-weight: 500;
+}
+.user-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: var(--shadow-color) ;
+}
+.user-tasks{
+  width: 600px;
+  min-height: 500px;
+  /* background-color: #333  ; */
+}
+.user-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  
+}
+.task{
+  background-color: rgba(170, 102, 0, 0.695);
+  border-radius: 4px;
+  margin:5px 0px;
+  padding: 8px;
+  width: 90%;
+  position: relative;
+}
+.fa-trash{
+  position: absolute;
+  right:-50px; 
+  cursor: pointer;
+  color:white;
+  transition:var(--transition-fast);
+  transform: scale(1) ;
+}
+.fa-trash:hover{
+  color: rgb(255, 99, 99);
+  transform: scale(1.06) ;
+}
+.fa-check{
+  position: absolute;
+  right:-25px; 
+  cursor: pointer;
+  color:white;
+  transition:var(--transition-fast);
+  transform: scale(1) ;
+}
+.fa-check:hover{
+  color: rgb(109, 255, 99);
+  transform: scale(1.06) ;
+}
+
+.completed {
+  text-decoration: line-through;
+  /* color: rgb(30, 4, 4);balc */
+  color: rgb(232, 232, 232);
+}
